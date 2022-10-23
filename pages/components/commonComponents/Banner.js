@@ -1,9 +1,8 @@
 import Image from "next/image";
 
 const Banner = ({bannerData}) => {
-  console.log(bannerData)
   return (
-    <div className="banner">
+    <div className={"banner " + bannerData.class.banner}>
       <Image
         src={bannerData.src}
         alt="Banner"
@@ -12,9 +11,9 @@ const Banner = ({bannerData}) => {
         layout="responsive"
         objectFit="cover"
       ></Image>
-      <div className={bannerData.textClass}>
-        <div className={bannerData.titleClass}>{bannerData.title}</div>
-        <div className={bannerData.subTitleClass}>{bannerData.subTitle}</div>
+      <div className={`textContainer ` + bannerData.class.textContainer}>
+        <div className={`titleClass ` + bannerData.class.title}>{bannerData.title}</div>
+        <div className={`subTitleClass ` + bannerData.class.subTitle}>{bannerData.subTitle}</div>
       </div>
     </div>
   );

@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
+* {
+  box-sizing: border-box;
+}
 :root {
   --step--4: clamp(0.60rem, calc(0.60rem + 0.01vw), 0.61rem);
   --step--3: clamp(0.72rem, calc(0.71rem + 0.05vw), 0.77rem);
@@ -12,6 +17,19 @@
   --step-5: clamp(3.11rem, calc(2.82rem + 1.47vw), 4.58rem);
 }
 
+.reverse-order-column{
+  flex-direction: column-reverse;
+}
+
+.margin-block-rem{
+  margin-block: 3rem;
+}
+
+.customHR{
+  max-width: 8ch;
+  color: white;
+}
+
 html,
 body {
   padding: 0;
@@ -19,7 +37,18 @@ body {
   font-size: var(--step--1);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    display: flex;
+    place-content: center;
+    place-items: center;
     scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
+main{
+  padding: 0;
+  margin: 0;
+  max-width: 1920px;
+  background-color: white;
 }
 
 a {
@@ -28,22 +57,47 @@ a {
   font-size: var(--step-0);
 }
 
-* {
-  box-sizing: border-box;
+
+footer{
+  background-color: #4A84C8;
+  color:white;
+  min-height: 35vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-block: 3rem;
+  gap:1rem;
 }
+
 .NavBarContainer{
-  width: 100vw;
+  width: 100%;
+  position: sticky !important;
+  position: -webkit-sticky;
+  z-index: 1;
+  top:0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .NavBarInfoContainer{
   width: 100%;
   display: flex;
-  gap:2rem;
+  gap:1rem;
+  justify-content: space-evenly;
   padding: 0.25rem 0 0.25rem .5rem;
   background-color: #131313;
   color: white;
 }
+
+.NavBarInfoContainer .fa{
+  color: #47a3a0;
+  display: block;
+}
 .NavBarInfo{
-  margin-left: 2%;
+  display: grid;
+  grid-template-columns: 20px auto;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .NavBarInfo p {
@@ -55,7 +109,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  z-index: -1;
+  background-color: white;
 }
 .logo{
   margin-left: 2%;
@@ -63,55 +118,81 @@ a {
   padding: 0.5rem;
 }
 .links{
-  margin-right: var(--step--3);
   display: flex;
   flex-wrap: nowrap;
 }
+.links:last-child{
+  margin-right:0.75rem;;
+}
 
-.link{
+.linkAnchor{
   padding: 0 var(--step--4);
   font-size: var(--step--1);
   text-align: center;
 }
-.link:focus-visible,.link:hover{
+
+.linkAnchor:focus-visible,.linkAnchor:hover{
   color:#47a3a0;
+  outline: 2px solid #131313;
+  border-radius: 3px;
 }
 
 .banner{
   position: relative;
   width: 100%;
-  max-height: 75vh;
-  overflow: hidden;
+  max-height: 50vh;
+  min-height: 35vw;
+  overflow: hidden;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .bannerText{
   position: absolute;
+  max-width: min(60ch,90%);
+}
+
+.bannerTextAbout{
+  top: 30%;
+  left: 5%;
+}
+
+.bannerTextServices{
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
 }
 
+
 .services{
   padding:1rem;
   width: fit-content;
   font-size: var(--step-5);
-  background-color: #FABD00;
+  background-color: #FABD00ee;
   color:white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .dreams{
   padding:1rem;
   font-size: var(--step-2);
-  background-color: #4A84C8;
+  background-color: #4A84C8ee;
   color:white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
+
+.aboutSubtitle{
+  background-color: #4A84C8cc;
+}
+
 .heroContainer{
   width: 100%;
   min-height: 25vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  padding: 2rem;
 }
+
 .heroPresentation{
   display: flex;
   width: 100%;
@@ -152,7 +233,12 @@ a {
   gap:5%;
   padding: 2rem;
   place-content: center;
-  place-items: center;
+  place-items: flex-start;
+}
+
+.gridContainerAbout{
+  margin-bottom: 4.5rem;
+  margin-top: -2rem;
 }
 
 .gridCard{
@@ -162,7 +248,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;  
-  margin-block: 3rem;
+  margin-top: 3rem;
 }
 
 .gridCardImage{
@@ -187,4 +273,63 @@ a {
 .gridCardText{
   font-size: var(--step--1);
   font-weight: 300;
+}
+
+.companyInfo{
+  max-width: 80ch;
+  text-align: center;
+}
+
+.companyName{
+  font-size: var(--step-1);
+}
+
+.companyAddressEl{
+  margin-top: -0.5rem;
+}
+
+.infoTitle{
+  font-size: var(--step-0);
+  margin: 0rem;
+}
+
+.footerConctactInfo a{
+  color: whitesmoke;
+  font-size: var(--step--1)
+}
+.NavBarInfoContainer a{
+  color: whitesmoke;
+  font-size: var(--step--1)
+}
+
+
+.footerConctactInfoContainer{
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  justify-content: flex-start;
+  gap:0.5rem;
+  margin-block:1rem;
+}
+
+.footerConctactInfoContainer .fa{
+  color: #FABD00;
+  font-size: var(--step-2);
+  text-align: center;
+}
+
+@media only screen and (max-width:600px) {
+
+.NavBarInfo{
+  max-width: 25ch;
+}
+  
+.margin-block-rem{
+  margin-block: 1rem;
+}
+
+.gridContainerAbout{
+  margin-bottom: 1.5rem;
+  margin-top: -7rem;
+}
 }
