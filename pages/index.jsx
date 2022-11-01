@@ -16,32 +16,27 @@ const Data = {
       {
         image: "/1.jpg",
         title: "Steel stud framing",
-        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-   Qui dicta minus molestiae vel beatae `,
+        text: `Constructed of galvanized steel for incredible durability `,
       },
       {
         image: "/2.jpg",
         title: "Insulation",
-        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Qui dicta minus molestiae vel beatae`,
+        text: `Protect home from cold, heat and humidity. Save on power bills.`,
       },
       {
         image: "/3.jpg",
         title: "Floor systems",
-        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Qui dicta minus molestiae vel beatae`,
+        text: `Our company has the experience and knowledge to help you choose and install the right commercial flooring.`,
       },
       {
         image: "/4.jpg",
         title: "Drywall",
-        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Qui dicta minus molestiae vel beatae`,
+        text: `Whether you're finishing an add-on to your home or refinishing a basement, adding drywall is an essential step.`,
       },
       {
         image: "/5.jpg",
         title: "Plastering",
-        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Qui dicta minus molestiae vel beatae`,
+        text: `Cemented In Quality. Built On Trust.`,
       },
       {
         image: "/6.jpg",
