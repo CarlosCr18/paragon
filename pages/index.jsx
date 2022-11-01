@@ -1,8 +1,8 @@
 import Head from "next/head";
-import NavBar from "./components/navbar/navbar";
-import About from "./components/About/About";
-import Services from "./components/Services/services";
-import Footer from "./components/footer/footer";
+import NavBar from "../components/navbar/navbar"
+import About from "../components/About/About";
+import Services from "../components/Services/services";
+import Footer from "../components/footer/footer";
 import 'font-awesome/css/font-awesome.min.css';
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
